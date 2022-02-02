@@ -61,7 +61,7 @@ for (let btns of buttons) {
             //     break;
 
             case "F-E": let fix = display.innerText;
-                        if (fix.length > 20) {
+                        if (fix.length > 10) {
                             display.innerText = display.innerText.substring(0, 8);
                         }
                 break; 
@@ -165,6 +165,7 @@ for (let btns of buttons) {
                       else {
                           display.innerText *= Math.PI.toFixed(5);
                       }
+                      eval(display.innerText);
                 break; 
             case "e": if(display.innerText == "0") {
                           display.innerText = Math.E.toFixed(5);
@@ -172,6 +173,7 @@ for (let btns of buttons) {
                       else {
                           display.innerText *= Math.E.toFixed(5);
                       }
+                      eval(display.innerText);
                 break;
 
             case "C": display.innerText = "";
