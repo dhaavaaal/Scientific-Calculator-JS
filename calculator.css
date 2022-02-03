@@ -1,0 +1,90 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+.main-container {
+    width: 344px;
+    height: 489px;
+    background-color: #f3f3f3;
+    margin-top: 5%;
+}
+.function-div {
+    height: 195px;
+}
+.calc-screen {
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    height: 100px;
+    font-size: 34px;
+    font-weight: bold;
+    overflow: hidden;
+}
+button{
+    border: 0;
+    outline: none;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    margin: 2px;
+    cursor: pointer;
+}
+/* .{
+    margin: 2px 10px !important; 
+} */
+.function-div button:hover {
+    background-color: white;
+}
+/* button:hover {
+    background-color: #BAB9B9;
+} */
+.btn-deg, .btn-fe {
+    font-weight: 600 !important;
+    background-color: inherit;
+    margin: 2px 10px !important;
+}
+.btn-memory {
+    background-color: inherit;
+}
+.btn-memory:nth-child(-n + 2) {
+    color: #999292;
+}
+.dropdown a:hover {
+    background-color: white;
+}
+.dropdown-trigo-func {
+    cursor: pointer;
+    display: grid;
+}
+.btn-func {
+    background-color: inherit;  
+}
+.button-div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 12px;
+    padding: 3.5px;
+    height: 289px;
+    font-weight: 100;
+}
+.button-div button:hover {
+    background-color: #BAB9B9;
+}
+.operator-btn-size {
+    font-size: 16px;
+}
+.operator-btn {
+    background-color: #f7f7f7;
+}
+.number-btn {
+    background-color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.equal-btn {
+    background-color: #90BEE3;
+}
+.equal-btn:hover {
+    background-color: #79ABD4 !important;
+}

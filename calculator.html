@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    
+    <div class="container main-container">
+        <div class="inner-container">
+            <div class="function-div">
+                
+                <div type="text" id="screen" class="calc-screen"></div>
+                <!-- <div type="text" id="screen" class="calc-screen-output">0</div> -->
+
+                <div class="row">
+                    <!-- <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Deg
+                        </label>
+                      </div> -->
+                    <button class="col-2 btn-light btn-deg">DEG</button>
+                    <button class="col-2 btn-light btn-fe">F-E</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light btn-memory">MC</button>
+                    <button class="col btn-light btn-memory">MR</button>
+                    <button class="col btn-light btn-memory">M+</button>
+                    <button class="col btn-light btn-memory">M-</button>
+                    <button class="col btn-light btn-memory">MS</button>
+                </div>
+
+                <div class="trigo-functions">
+                    <div class="row">
+                        
+                        <div class="trigo-btns col-4">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle" 
+                                        type="button" 
+                                        id="dropdownMenu2" 
+                                        data-toggle="dropdown" 
+                                        aria-haspopup="true" 
+                                        aria-expanded="false"
+                                >
+                                &#8895; Trigonometry
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <button class="dropdown-item" type="button">sin</button>
+                                    <button class="dropdown-item" type="button">cos</button>
+                                    <button class="dropdown-item" type="button">tan</button>
+                                    <button class="dropdown-item" type="button">cot</button>
+                                    <button class="dropdown-item" type="button">cosec</button>
+                                    <button class="dropdown-item" type="button">sec</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="func-btns col-4">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle" 
+                                        type="button" 
+                                        id="dropdownMenu2" 
+                                        data-toggle="dropdown" 
+                                        aria-haspopup="true" 
+                                        aria-expanded="false"
+                                >
+                                ƒ Functions
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <button class="dropdown-item" type="button">Floor</button>
+                                    <button class="dropdown-item" type="button">Ceiling</button>
+                                    <button class="dropdown-item" type="button">Round</button>
+                                    <button class="dropdown-item" type="button">Sign</button>
+                                    <button class="dropdown-item" type="button">Truncate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-div">
+
+                <button class="operator-btn second">2<sup style="font-size: 0.7rem">nd</sup></button>
+                <!-- <button class="operator-btn" id="first" style="display: none;">1<sup style="font-size: 0.7rem">st</sup></button> -->
+                <button class="operator-btn">π</button>                
+                <button class="operator-btn">e</button>
+                <button class="operator-btn">C</button>
+                <button class="operator-btn">&larr;</button>
+
+                <button class="operator-btn secondFunctions">x<sup>2</sup></button>
+                <!-- <button class="operator-btn x^3" style="display: none;">x<sup>3</sup></button> -->
+                <button class="operator-btn"><sup>1</sup>/<sub style="font-size: 1.2rem">x</sub></button>
+                <button class="operator-btn"><span style="font-size: 1.2rem">|x|</span></button>
+                <button class="operator-btn">exp</button>              
+                <button class="operator-btn">mod</button>              
+                
+                <button class="operator-btn secondFunctions"><sup>2</sup>√x</button>  
+                <!-- <button class="operator-btn 3√x" style="display: none;"><sup>3</sup>√x</button>                   -->
+                <button class="operator-btn">(</button>              
+                <button class="operator-btn">)</button>              
+                <button class="operator-btn">n!</button>              
+                <button class="operator-btn operator-btn-size">/</button>              
+                
+                <button class="operator-btn secondFunctions">x<sup>y</sup></button>   
+                <!-- <button class="operator-btn y√x" style="display: none;"><sup>y</sup>√x</button>            -->
+                <button class="number-btn">7</button>              
+                <button class="number-btn">8</button>              
+                <button class="number-btn">9</button>              
+                <button class="operator-btn operator-btn-size">*</button>              
+                
+                <button class="operator-btn secondFunctions">10<sup>x</sup></button>
+                <!-- <button class="operator-btn 2^x" style="display: none;">2<sup>x</sup></button>               -->
+                <button class="number-btn">4</button>              
+                <button class="number-btn">5</button>              
+                <button class="number-btn">6</button>              
+                <button class="operator-btn operator-btn-size">-</button>              
+                
+                <button class="operator-btn secondFunctions">log</button>     
+                <!-- <button class="operator-btn logx-basey" style="display: none;">log<sub>y</sub>x</button>          -->
+                <button class="number-btn">1</button>              
+                <button class="number-btn">2</button>              
+                <button class="number-btn">3</button>              
+                <button class="operator-btn operator-btn-size">+</button>              
+                
+                <button class="operator-btn secondFunctions">ln</button>
+                <!-- <button class="operator-btn ln" style="display: none;">e<sup>x</sup></button>               -->
+                <button class="number-btn"><sup>+</sup>/-</button>              
+                <button class="number-btn">0</button>              
+                <button class="number-btn">.</button>              
+                <button class="equal-btn operator-btn-size">=</button>
+                <!-- <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div>
+
+                <div class="row">
+                    <button class="col btn-light">MC</button>
+                    <button class="col btn-light">MR</button>
+                    <button class="col btn-light">M+</button>
+                    <button class="col btn-light">M-</button>
+                    <button class="col btn-light">MS</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous">
+    </script>
+    <script src="calculator.js"></script>
+</body>
+</html>
